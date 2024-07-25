@@ -1,0 +1,33 @@
+{
+  "inbounds": [
+    {
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": false,
+        "ip": "127.0.0.1"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.64.97.12",  // 替换为你的服务器IP地址
+            "port": 8443,  // 替换为你的服务器端口
+            "users": [
+              {
+                "id": "8743d94a-61bc-42c5-b709-980a964e6e49",  // 替换为你的UUID
+                "alterId": 64
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
